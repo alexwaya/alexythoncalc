@@ -50,4 +50,11 @@ class app(Frame):
 			
 
 
-		
+		def calc(self, display):
+			try:
+				display.set(eval(display.get()))
+			except:
+				display.set("ERROR")
+
+if __name__ == '__main__':
+	app().mainloop()
