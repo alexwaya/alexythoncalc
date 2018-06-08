@@ -20,8 +20,17 @@ class app(Frame):
 		self.master.title("Calculator")
 
 		display = StringVar()
-		ENtry(self, relief=,
-			)
+		ENtry(self, relief=FLAT,
+			textvariable = display, justify ="right", bd=30, bg="powder blue".pack(side=TOP, expand=YES, fill=BOTH))
+
+
+		for clearBut in xrange(["CE"], ["C"]):
+			erase = iCalc(self,TOP)
+			for ichar in clearBut:
+				button(erase,LEFT,ichar,
+					lambda storeObj=display, q=ichar: storeObj.set(""))
+			
+		
 
 
 		
