@@ -30,7 +30,12 @@ class app(Frame):
 				button(erase,LEFT,ichar,
 					lambda storeObj=display, q=ichar: storeObj.set(""))
 			
-		
+		for NumBut in ("789/", "456*", "123-", "0.+"):
+			FunctionNum = iCalc(self, TOP)
+			for char in NumBut:
+				button(FunctionNum, LEFT, char,
+					lambda storeObj=display, q=char: storeObj.get() + q)
+			
 
 
 		
